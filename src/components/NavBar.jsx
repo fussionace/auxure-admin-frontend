@@ -5,8 +5,8 @@ import Ellipse from '../assets/images/Ellipse.png'
 
 const NavBar = ({ toggleTheme, darkTheme }) => {
   return (
-    <div className='bg-white dark:bg-dark-primary h-[4.875rem] px-[2rem] flex items-center justify-between border-b-2 border-gray'>
-      <hgroup className='flex items-center w-[14rem] justify-between'>
+    <div className='bg-white dark:bg-dark-primary h-[4.875rem] px-[1.85rem] flex items-center justify-between border-b-2 border-gray'>
+      <hgroup className='flex items-center w-[12rem] justify-between'>
           <Link to='/admin'>
             { darkTheme? <AuxureDark /> : <Auxure /> }
           </Link>

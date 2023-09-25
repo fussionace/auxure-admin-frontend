@@ -19,6 +19,13 @@ import { ReactComponent as reviewsLight } from './reviews-light.svg';
 import { ReactComponent as transactionsLight } from './transactions-light.svg';
 import { ReactComponent as analyticsLight } from './analytics-light.svg';
 import { ReactComponent as messages  } from './message-light.svg';
+import { ReactComponent as money  } from './money-light.svg';
+import { ReactComponent as order  } from './order-light.svg';
+import { ReactComponent as product  } from './products-light.svg';
+import { ReactComponent as graph  } from './graph.svg';
+import { ReactComponent as analytics  } from './analytics.svg';
+import { ReactComponent as settings  } from './settings.svg';
+import { ReactComponent as logout  } from './logout.svg';
 
 export const Auxure = React.memo(auxure);
 export const Hamburger = React.memo(hamburger);
@@ -40,4 +47,11 @@ export const Reviews = React.memo(reviewsLight)
 export const TransactionsLight = React.memo(transactionsLight)
 export const AnalyticsLight = React.memo(analyticsLight)
 export const Messages = React.memo(messages)
+export const MoneyLight = React.memo(money)
+export const OrderLight = React.memo(order)
+export const ProductsLight = React.memo(product)
+export const Graph = React.memo(graph)
+export const Analytics = React.memo(analytics)
+export const Settings = React.memo(settings)
+export const Logout = React.memo(logout)
 

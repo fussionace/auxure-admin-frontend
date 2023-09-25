@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Admin from './pages/Admin';
+import Dashboard from './pages/Dashboard';
 import './index.css'
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
@@ -27,10 +27,10 @@ function App() {
 
   return (
     <div className={ darkTheme ? 'dark' : '' }>
-      <NavBar darkTheme={ darkTheme } toggleTheme={ toggleTheme }/>
-      <Sidebar />
+      {/* <NavBar darkTheme={ darkTheme } toggleTheme={ toggleTheme }/> */}
+      <Sidebar darkTheme={ darkTheme } />
       <Routes>
-        <Route path='/admin/' element={ <Admin /> } />
+        <Route path='/admin/' element={ <Dashboard  darkTheme={ darkTheme } toggleTheme={ toggleTheme }/> } />
         <Route path='/admin/products' element={ <Products /> } />
         <Route path='/admin/orders' element={ <Orders /> } />
         <Route path='/admin/customers' element={ <Customers /> } />

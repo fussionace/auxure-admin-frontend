@@ -2,7 +2,7 @@ import React from 'react'
 
 const Customers = () => {
   return (
-    <div>Customers</div>
+    <div className='ml-[16.6857rem]'>Customers</div>
   )
 }
 
