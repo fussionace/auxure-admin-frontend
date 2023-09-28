@@ -2,7 +2,7 @@ import React from 'react'
 
 const Products = () => {
   return (
-    <div>Products</div>
+    <div className='ml-[18.125rem] p-[2rem]'>Products</div>
   )
 }
 

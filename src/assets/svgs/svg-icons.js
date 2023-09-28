@@ -26,6 +26,9 @@ import { ReactComponent as graph  } from './graph.svg';
 import { ReactComponent as analytics  } from './analytics.svg';
 import { ReactComponent as settings  } from './settings.svg';
 import { ReactComponent as logout  } from './logout.svg';
+import { ReactComponent as sidebarDrop  } from './sidebar-drop.svg';
+import { ReactComponent as dashboardInactive  } from './dashboard-inactive.svg';
+import { ReactComponent as stars  } from './stars.svg';
 
 export const Auxure = React.memo(auxure);
 export const Hamburger = React.memo(hamburger);
@@ -54,4 +57,7 @@ export const Graph = React.memo(graph)
 export const Analytics = React.memo(analytics)
 export const Settings = React.memo(settings)
 export const Logout = React.memo(logout)
+export const SidebarDrop = React.memo(sidebarDrop)
+export const DashboardInactive = React.memo(dashboardInactive)
+export const Stars = React.memo(stars)
 
