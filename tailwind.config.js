@@ -5,13 +5,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        'white':'#FCFAF8',
+        'accent':'#FCFAF8',
         'gray': '#B8B8B8',
         'dark-primary' : '#343332',
         'dark-background': '#2B271D',
         'light-gray' : '#F1F4FA',
         'coffee-brown' : '#4E4033',
-        'lightbrown' : '#d4b483'
+        'lightbrown' : '#d4b483',
+        'accent-2': '#F8F3ED',
+        'accent-yellow': '#FFA500',
+        'brown-secondary' : '#a27738',
+        'cream' : 'rgba(212, 180, 131, 0.10)',
+        'btn-delivered': '#D7F3DF',
+        'delivered' : '#0D9934',
+        'canceled' : '#EA1717',
+        'btn-canceled' : '#EDBCBC',
+        'btn-pending' : 'rgba(255, 165, 0, 0.10)',
+        'pending' : 'FFA500',
+        'darkest' : '#312921'
       },
       boxShadow : {    
         'custom': '0px 4px 16px 2px rgba(0, 0, 0, 0.25)',

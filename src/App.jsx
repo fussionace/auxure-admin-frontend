@@ -36,14 +36,14 @@ function App() {
       <Sidebar darkTheme={ darkTheme } />
       <Routes>
         <Route path='/admin/' element={ <Dashboard  darkTheme={ darkTheme } toggleTheme={ toggleTheme }/> } />
-        <Route path='/admin/products' element={ <Products /> } />
+        <Route path='/admin/products' element={ <Products darkTheme={ darkTheme } toggleTheme={ toggleTheme }/> } />
         <Route path='/admin/orders' element={ <Orders darkTheme={ darkTheme } toggleTheme={ toggleTheme }/> } />
-        <Route path='/admin/customers' element={ <Customers /> } />
-        <Route path='/admin/statistics' element={ <Statistics /> } />
-        <Route path='/admin/reviews' element={ <Reviews /> } />
-        <Route path='/admin/transactions' element={ <Transaction /> } />
-        <Route path='/admin/analytics' element={ <Analytics /> } />
-        <Route path='/admin/messages' element={ <Messages /> } />
+        <Route path='/admin/customers' element={ <Customers darkTheme={ darkTheme } toggleTheme={ toggleTheme }/> } />
+        <Route path='/admin/statistics' element={ <Statistics darkTheme={ darkTheme } toggleTheme={ toggleTheme }/> } />
+        <Route path='/admin/reviews' element={ <Reviews darkTheme={ darkTheme } toggleTheme={ toggleTheme }/> } />
+        <Route path='/admin/transactions' element={ <Transaction darkTheme={ darkTheme } toggleTheme={ toggleTheme }/> } />
+        <Route path='/admin/analytics' element={ <Analytics darkTheme={ darkTheme } toggleTheme={ toggleTheme }/> } />
+        <Route path='/admin/messages' element={ <Messages darkTheme={ darkTheme } toggleTheme={ toggleTheme }/> } />
       </Routes>
     </div>
   )

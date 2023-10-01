@@ -29,6 +29,10 @@ import { ReactComponent as logout  } from './logout.svg';
 import { ReactComponent as sidebarDrop  } from './sidebar-drop.svg';
 import { ReactComponent as dashboardInactive  } from './dashboard-inactive.svg';
 import { ReactComponent as stars  } from './stars.svg';
+import { ReactComponent as search  } from './search.svg';
+import { ReactComponent as chevrondown  } from './chevrondown.svg';
+import { ReactComponent as chevronleft  } from './chevronleft.svg';
+import { ReactComponent as chevronright  } from './chevronright.svg';
 
 export const Auxure = React.memo(auxure);
 export const Hamburger = React.memo(hamburger);
@@ -60,4 +64,7 @@ export const Logout = React.memo(logout)
 export const SidebarDrop = React.memo(sidebarDrop)
 export const DashboardInactive = React.memo(dashboardInactive)
 export const Stars = React.memo(stars)
-
+export const Search = React.memo(search)
+export const Chevrondown = React.memo(chevrondown)
+export const ChevronLeft = React.memo(chevronleft)
+export const ChevronRight = React.memo(chevronright)
