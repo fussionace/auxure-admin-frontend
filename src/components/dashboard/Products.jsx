@@ -86,7 +86,7 @@ const Products = () => {
             topSelling.map((product) => (
                 <div className="card cursor-pointer flex items-center gap-[1rem] mb-[1rem]" key={Math.random()}>
                    <div className="product-image w-[7.07519rem] h-[6.25rem] rounded-[.31538rem] border-solid border-brown-secondary border-[1px]">
-                      <img src={ product.img } alt= { product.name } className='w-full h-full object-cover'/>
+                      <img src={ product.img } alt= { product.name } className='w-full h-full object-cover rounded-[.31538rem]'/>
                    </div> 
                     <div className="product_details">
                       <h1 className='text-[1rem] font-light dark:text-white'>{ product.name }</h1>

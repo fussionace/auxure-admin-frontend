@@ -213,53 +213,53 @@ const Transaction = ({ toggleTheme, darkTheme }) => {
     },
   ]
 
-    const [ currentPage, setCurrentPage ] = useState(1);
-    const [display, setDisplay ] = useState(10);
-    const [activePage, setActivePage ] = useState(1);
-    const [maxPageLimit, setMaxPageLimit] = useState(9);
-    const [minPageLimit, setMinPageLimit] = useState(0);
+  const [ currentPage, setCurrentPage ] = useState(1);
+  const [display, setDisplay ] = useState(10);
+  const [activePage, setActivePage ] = useState(1);
+  const [maxPageLimit, setMaxPageLimit] = useState(9);
+  const [minPageLimit, setMinPageLimit] = useState(0);
 
-    const last = currentPage * display;
-    const first = last - display;
-    const values = products.slice(first, last);
-    const btnCount = [];
-    
-    for(let i = 1;i <= Math.ceil(products.length/display);i++ ){
-        btnCount.push(i);
-    } 
+  const last = currentPage * display;
+  const first = last - display;
+  const values = products.slice(first, last);
+  const btnCount = [];
+  
+  for(let i = 1;i <= Math.ceil(products.length/display);i++ ){
+      btnCount.push(i);
+  } 
 
-    const handleChange = (i) => {
+  const handleChange = (i) => {
 
-      setCurrentPage(i);
-      setActivePage(i);
-    
-    }
+    setCurrentPage(i);
+    setActivePage(i);
+  
+  }
 
-    // prev    
-    const onPrevClick = () => {
-      if ((currentPage-1) % display === 0 ) {
-          setMaxPageLimit(maxPageLimit - display)
-          setMinPageLimit(minPageLimit - display)
-        }
-        setCurrentPage(prev => prev-1)
-        setActivePage(prev => prev-1)
-    }
-
-    // Next
-    const onNextClick = () => {
-      if ((currentPage-1) > maxPageLimit ) {
-        setMaxPageLimit(maxPageLimit + display)
-        setMinPageLimit(minPageLimit + display)
+  // prev    
+  const onPrevClick = () => {
+    if ((currentPage-1) % display === 0 ) {
+        setMaxPageLimit(maxPageLimit - display)
+        setMinPageLimit(minPageLimit - display)
       }
-      setCurrentPage(prev => prev+1)
-      setActivePage(prev => prev+1)
+      setCurrentPage(prev => prev-1)
+      setActivePage(prev => prev-1)
+  }
 
+  // Next
+  const onNextClick = () => {
+    if ((currentPage-1) > maxPageLimit ) {
+      setMaxPageLimit(maxPageLimit + display)
+      setMinPageLimit(minPageLimit + display)
     }
+    setCurrentPage(prev => prev+1)
+    setActivePage(prev => prev+1)
+
+  }
 
   return (
     <div className='ml-[18.125rem] p-[2rem] bg-light-gray dark:bg-darkest min-h-screen'>
       <hgroup className="title-container flex items-center justify-between mb-[3rem] mr-[4rem]">
-        <h1 className='font-medium dark:text-white md:text-[2rem]'>Dashboard</h1>        
+        <h1 className='font-medium dark:text-white md:text-[2rem]'>Transaction</h1>        
         <div className='flex items-center justify-center gap-[1.5rem]'>
           <div className="theme cursor-pointer" onClick={ toggleTheme }>
             { darkTheme ?  <Sun /> : <Moon /> }
@@ -294,6 +294,7 @@ const Transaction = ({ toggleTheme, darkTheme }) => {
         </div>
       </div>
 
+      {/* table */}
       <div className='bg-white dark:bg-dark-primary rounded-[.625rem]'>
         <table className='w-full dark:text-white'>
           <thead>
@@ -330,6 +331,7 @@ const Transaction = ({ toggleTheme, darkTheme }) => {
             <input type="number"  className='outline-none w-[6rem] flex border-solid border-gray border-[1px] rounded-[.625rem] py-[.625rem] px-[1.25rem]' min={0}/>
             <span className="block text-gray text-[.9375rem] font-semibold">of 50</span>
           </div>
+          {/* pagination */}
           <div className="pagination flex items-center justify-center gap-[.25rem]">
             <button className='bg-light-gray flex items-center justify-center w-[1.75rem] h-[1.75rem] text-base border-light-gray border-solid border-[1px] rounded-[.25rem]' onClick={ onPrevClick } disabled={ activePage === 1 }>
               <ChevronLeft/>
