@@ -19,6 +19,24 @@ const Orders = ({ toggleTheme, darkTheme, openSidebar }) => {
   const [activeButton, setActiveButton] = useState(false);
   const [activeTab, setActiveTab] = useState("tab1");
 
+  const orders = [
+    {
+      name: "NEW ORDERS",
+      number: "267",
+      arrow: <Arrowgreen />,
+    },
+    {
+      name: "PENDING ORDERS",
+      number: "102",
+      arrow: <Arroworange />,
+    },
+    {
+      name: "DELIVERED ORDERS",
+      number: "360",
+      arrow: <Arrowgreen />,
+    },
+  ];
+
   return (
     <div
       className={
@@ -78,59 +96,25 @@ const Orders = ({ toggleTheme, darkTheme, openSidebar }) => {
       </hgroup>
 
       <div className="numbers-flex flex items-start gap-[1.6875rem]">
-        <div className="card w-[21rem] h-[7.5rem] rounded-[.3125rem] bg-cream flex items-center justify-center gap-[2rem]">
-          {/* svg space */}
-          <div className="ellipse flex items-center justify-center h-[4.5rem] w-[4.5rem] bg-white rounded-full"></div>
-          <div className="text flex flex-col gap-[.5rem]">
-            <h1 className="text-[1rem] font-medium text-brown-secondary dark:text-gray">
-              NEW ORDERS
-            </h1>
-            <div className="flex justify-around items-center">
-              <span className="block text-[2rem] font-medium border-r-[1px] pr-[2rem] border-gray dark:text-accent-5">
-                267
-              </span>
-              <div className=" ml-[2rem] ellipse flex items-center justify-center bg-accent h-[1.5rem] w-[1.5rem] rounded-full">
-                <Arrowgreen />
+        {orders.map((order) => (
+          <div className="card  w-full h-[7.5rem] rounded-[.3125rem] bg-cream dark:bg-accent-dark flex items-center justify-center gap-[2rem]">
+            {/* svg space */}
+            <div className="ellipse flex items-center justify-center h-[4.5rem] w-[4.5rem] bg-white dark:bg-cream rounded-full"></div>
+            <div className="text flex flex-col gap-[.5rem]">
+              <h1 className="text-[1rem] font-medium text-brown-secondary dark:text-gray">
+                {order.name}
+              </h1>
+              <div className="flex justify-around items-center">
+                <span className="block text-[2rem] font-medium border-r-[1px] pr-[2rem] border-gray dark:text-accent-5">
+                  {order.number}
+                </span>
+                <div className=" ml-[2rem] ellipse flex items-center justify-center bg-accent h-[1.5rem] w-[1.5rem] rounded-full">
+                  {order.arrow}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="card w-[21rem] h-[7.5rem] rounded-[.3125rem] bg-cream flex items-center justify-center gap-[2rem]">
-          {/* svg space */}
-          <div className="ellipse h-[4.5rem] w-[4.5rem] bg-white rounded-full"></div>
-          <div className="text flex flex-col gap-[.5rem]">
-            <h1 className="text-[1rem] font-medium text-brown-secondary dark:text-gray">
-              PENDING ORDERS
-            </h1>
-            <div className="flex justify-around items-center">
-              <span className="block text-[2rem] font-medium border-r-[1px] pr-[2rem] border-gray dark:text-accent-5">
-                102
-              </span>
-              <div className=" ml-[2rem] ellipse flex items-center justify-center bg-accent h-[1.5rem] w-[1.5rem] rounded-full">
-                <Arroworange />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="card w-[21rem] h-[7.5rem] rounded-[.3125rem] bg-cream flex items-center justify-center gap-[2rem]">
-          {/* svg space */}
-          <div className="ellipse h-[4.5rem] w-[4.5rem] bg-white rounded-full"></div>
-          <div className="text flex flex-col gap-[.5rem]">
-            <h1 className="text-[1rem] font-medium text-brown-secondary dark:text-gray">
-              DELIVERED ORDERS
-            </h1>
-            <div className="flex justify-around items-center">
-              <span className="block text-[2rem] font-medium border-r-[1px] pr-[2rem] border-gray dark:text-accent-5">
-                360{" "}
-              </span>
-              <div className=" ml-[2rem] ellipse flex items-center justify-center bg-accent h-[1.5rem] w-[1.5rem] rounded-full">
-                <Arrowgreen />
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
 
       <section className="tabs  mt-[3rem] after:block after:h-[.125rem] after:w-full after:bg-gray">

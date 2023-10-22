@@ -11,13 +11,16 @@ import {
   Edit,
   Recycle,
   Lock,
+  EditDark,
+  LockDark,
+  RecycleDark,
 } from "../assets/svgs/svg-icons";
 import Ellipse from "../assets/images/Ellipse.png";
 import Ellipse1 from "../assets/images/Ellipse200.png";
 import Ellipse2 from "../assets/images/Ellipse201.png";
 import Ellipse3 from "../assets/images/Ellipse202.png";
 
-const Customers = ({ darkTheme, toggleTheme }) => {
+const Customers = ({ darkTheme, toggleTheme, openSidebar }) => {
   const customers = [
     {
       img: Ellipse1,
@@ -71,7 +74,7 @@ const Customers = ({ darkTheme, toggleTheme }) => {
   ];
 
   return (
-    <div className="ml-[18.125rem] p-[2rem] bg-accent dark:bg-dark-background min-h-screen">
+    <div className={ openSidebar ? "ml-[18.125rem] p-[2rem] bg-accent dark:bg-dark-background min-h-screen" : "ml-[8.125rem] p-[2rem] bg-accent dark:bg-dark-background min-h-screen"}>
       <hgroup className="title-container flex items-center justify-between mb-[3rem] mr-[4rem]">
         <h1 className="font-medium dark:text-white md:text-[2rem]">
           Customers
@@ -101,7 +104,7 @@ const Customers = ({ darkTheme, toggleTheme }) => {
       <div className="search relative mb-[1.3rem]">
         <input
           type="text"
-          className="rounded-[1.875rem] py-[.75rem] pr-[10.6875rem] pl-[3.2rem] outline-none"
+          className="dark:bg-dark-primary dark:text-accent-4 rounded-[1.875rem] py-[.75rem] pr-[10.6875rem] pl-[3.2rem] outline-none"
           placeholder="Search..."
         />
         <Search className="absolute top-[28%] left-[2%] h-[1.367673rem] w-[1.367673rem]" />
@@ -139,9 +142,9 @@ const Customers = ({ darkTheme, toggleTheme }) => {
                 </td>
                 <td>
                   <div className="action flex items-center gap-[.5rem]">
-                    <Edit />
-                    <Lock />
-                    <Recycle />
+                    {darkTheme ? <EditDark /> : <Edit />}
+                    {darkTheme ? <LockDark /> : <Lock />}
+                    {darkTheme ? <RecycleDark /> : <Recycle />}
                   </div>
                 </td>
               </tr>
@@ -159,7 +162,7 @@ const Customers = ({ darkTheme, toggleTheme }) => {
             </label>
             <input
               type="number"
-              className="outline-none w-[6rem] flex border-solid border-gray border-[1px] rounded-[.625rem] py-[.625rem] px-[1.25rem]"
+              className="outline-none w-[4rem] dark:bg-transparent flex border-solid border-gray dark:border-brown-secondary dark:text-brown-secondary border-[1px] rounded-[.25rem] py-[.25rem] px-[.5rem]"
               min={0}
             />
             <span className="block text-gray text-[.9375rem] font-semibold">

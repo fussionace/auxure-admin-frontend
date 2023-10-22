@@ -41,7 +41,10 @@ export default {
         "accent-8": "#F7F5F3",
         "accent-dark-3": "rgb(219, 191, 150, 0.3)",
         'accent-yellow-2': 'rgb(255, 175, 26, 0.3)',
-        'accent-coffee-2': 'rgb(219, 191, 150, 0.3)'
+        'accent-coffee-2': 'rgb(219, 191, 150, 0.3)',
+        'accent-dark': 'rgba(52, 51, 50, 1)',
+        'green-approved': 'rgba(82, 141, 99, 0.41)',
+        'space-gray': '#DBDADE'
       },
       boxShadow: {
         custom: "0px 4px 16px 2px rgba(0, 0, 0, 0.25)",

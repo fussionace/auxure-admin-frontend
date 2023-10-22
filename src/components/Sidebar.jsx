@@ -43,8 +43,8 @@ const Sidebar = ({ darkTheme, openSidebar, setOpenSidebar }) => {
     <div
       className={
         openSidebar
-          ? "bg-white dark:bg-dark-primary overflow-y-scroll fixed top-0 left-0 w-[18.125rem] h-screen flex flex-col items-start justify-between p-[2rem] py-[2.8rem]"
-          : "bg-white dark:bg-dark-primary overflow-y-scroll fixed top-0 left-0 w-[8.125rem] h-screen flex flex-col items-center justify-between py-[2.8rem]"
+          ? "bg-white dark:bg-dark-primary overflow-y-scroll fixed top-0 left-0 w-[18.125rem] h-screen md:flex hidden flex-col items-start justify-between p-[2rem] py-[2.8rem]"
+          : "bg-white dark:bg-dark-primary overflow-y-scroll fixed top-0 left-0 w-[8.125rem] h-screen md:flex hidden flex-col items-center justify-between py-[2.8rem]"
       }
     >
       <div className="group">
