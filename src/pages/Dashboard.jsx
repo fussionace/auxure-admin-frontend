@@ -5,11 +5,11 @@ import { Moon, Alert, AlertDark, NewMessage, ArrowDown, Sun, ArrowdownDark,  } f
 import Ellipse from '../assets/images/Ellipse.png'
 import Products from '../components/dashboard/Products'
 
-const Dashboard = ({ toggleTheme, darkTheme }) => {
+const Dashboard = ({ toggleTheme, darkTheme, openSidebar }) => {
   return (
-    <div className='font-primary p-[2rem] ml-[18.125rem] bg-light-gray dark:bg-dark-background min-h-screen mx-auto'>
+    <div className={ openSidebar  ? 'font-primary p-[2rem] ml-[18.125rem] bg-light-gray dark:bg-dark-background min-h-screen mx-auto' : 'font-primary p-[2rem] ml-[8.125rem] bg-light-gray dark:bg-dark-background min-h-screen mx-auto'}>
       {/* nav */}
-      <hgroup className="title-container flex items-center justify-between mb-[3rem] mr-[4rem] w-full max-w-[65.6875rem]">
+      <hgroup className="title-container flex items-center justify-between mb-[3rem] mr-[4rem] w-full">
         <h1 className='font-medium dark:text-white md:text-[2rem]'>Dashboard</h1>        
         <div className='flex items-center justify-center gap-[1.5rem]'>
           <div className="theme cursor-pointer" onClick={ toggleTheme }>
@@ -28,9 +28,9 @@ const Dashboard = ({ toggleTheme, darkTheme }) => {
         </div> 
       </hgroup>
       {/* first section */}
-      <Numbers />
+      <Numbers darkTheme={ darkTheme }/>
       <Chart />
-      <Products /> 
+      <Products darkTheme={darkTheme}/> 
     </div>
   )
 }

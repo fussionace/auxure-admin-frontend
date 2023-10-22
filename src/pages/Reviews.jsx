@@ -55,7 +55,7 @@ const Reviews = ({ darkTheme, toggleTheme }) => {
       </hgroup>
 
       <section className="ratings flex items-center gap-[2rem]">
-        <div className=" w-full total_reviews border-r-[.0625rem] border-accent-5 pr-[3.5rem] flex flex-col gap-[1.5rem] items-start">
+        <div className=" w-full total_reviews border-r-[.0625rem] border-accent-5 flex flex-col gap-[1.5rem] items-start">
           <h1 className="title text-[1rem] font-medium">Total Reviews</h1>
           <span className="flex items-center gap-[1rem]">
             <div className="text-[2rem] font-medium">10.0k</div>
@@ -67,7 +67,7 @@ const Reviews = ({ darkTheme, toggleTheme }) => {
           <span className="block text-[1rem] font-medium text-accent-7">Yearly growth in review</span>
         </div>
 
-        <div className="avegrage_ratings w-full flex flex-col gap-[1.5rem] items-start border-r-[.0625rem] border-accent-5 pr-[3.5rem]">
+        <div className="avegrage_ratings w-full flex flex-col gap-[1.5rem] items-start border-r-[.0625rem] border-accent-5">
           <h1 className="title text-[1rem] font-medium">Average Ratings</h1>  
           <span className="flex items-center gap-[1rem]">
             <div className="text-[2rem] font-medium">4.0</div>
