@@ -8,8 +8,8 @@ const Products = ({ darkTheme, openSidebar }) => {
     <div
       className={
         openSidebar
-          ? "ml-[18.125rem] p-[2rem] min-h-screen bg-accent dark:bg-dark-secondary"
-          : "ml-[8.125rem] p-[2rem] min-h-screen bg-accent dark:bg-dark-secondary"
+          ? "md:ml-[18.125rem] p-[2rem] min-h-screen bg-accent dark:bg-dark-secondary"
+          : "md:ml-[8.125rem] p-[2rem] min-h-screen bg-accent dark:bg-dark-secondary"
       }
     >
       {openPage ? (

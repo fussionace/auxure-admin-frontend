@@ -74,7 +74,13 @@ const Customers = ({ darkTheme, toggleTheme, openSidebar }) => {
   ];
 
   return (
-    <div className={ openSidebar ? "ml-[18.125rem] p-[2rem] bg-accent dark:bg-dark-background min-h-screen" : "ml-[8.125rem] p-[2rem] bg-accent dark:bg-dark-background min-h-screen"}>
+    <div
+      className={
+        openSidebar
+          ? "md:ml-[18.125rem] p-[2rem] bg-accent dark:bg-dark-background min-h-screen"
+          : "md:ml-[8.125rem] p-[2rem] bg-accent dark:bg-dark-background min-h-screen"
+      }
+    >
       <hgroup className="title-container flex items-center justify-between mb-[3rem] mr-[4rem]">
         <h1 className="font-medium dark:text-white md:text-[2rem]">
           Customers
@@ -160,11 +166,9 @@ const Customers = ({ darkTheme, toggleTheme, openSidebar }) => {
             >
               Showing
             </label>
-            <input
-              type="number"
-              className="outline-none w-[4rem] dark:bg-transparent flex border-solid border-gray dark:border-brown-secondary dark:text-brown-secondary border-[1px] rounded-[.25rem] py-[.25rem] px-[.5rem]"
-              min={0}
-            />
+            <div className="outline-none w-[2rem] dark:bg-transparent flex border-solid border-gray dark:border-brown-secondary dark:text-brown-secondary border-[1px] rounded-[.25rem] py-[.25rem] px-[.5rem]">
+              {customers.length}
+            </div>
             <span className="block text-gray text-[.9375rem] font-semibold">
               of 50
             </span>

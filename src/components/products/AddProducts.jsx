@@ -31,7 +31,7 @@ const AddProducts = ({ setOpenPage, darkTheme }) => {
       </hgroup>
 
       <div className="content-container mt-[4rem] gap-[2rem] flex items-start justify-between w-[90%]">
-        <section className="left_container">
+        <section className="left_container w-full">
           {/* description */}
           <div className="description-card">
             <h1 className="title md:text-[1.25rem] font-medium mb-[1rem] dark:text-accent-4">
@@ -130,7 +130,7 @@ const AddProducts = ({ setOpenPage, darkTheme }) => {
           </div>
         </section>
 
-        <section className="right_container">
+        <section className="right_container w-full">
           {/* product Images */}
           <div className="description-card relative">
             <h1 className="title dark:text-accent-4 md:text-[1.25rem] font-medium mb-[1rem]">

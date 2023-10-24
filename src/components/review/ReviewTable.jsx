@@ -5,7 +5,7 @@ import Ellipse200 from "../../assets/images/Ellipse200.png";
 import Ellipse201 from "../../assets/images/Ellipse201.png";
 import { Stars, Tools, ToolsDark } from "../../assets/svgs/svg-icons";
 
-const ReviewTable = ({ darkTheme }) => {
+const ReviewTable = ({ darkTheme}) => {
   const products = [
     {
       name: "Enchanted Elixir",

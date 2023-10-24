@@ -41,8 +41,8 @@ const Orders = ({ toggleTheme, darkTheme, openSidebar }) => {
     <div
       className={
         openSidebar
-          ? "ml-[18.125rem] p-[2rem] bg-light-gray dark:bg-dark-background min-h-screen"
-          : "ml-[8.125rem] p-[2rem] bg-light-gray dark:bg-dark-background min-h-screen"
+          ? "md:ml-[18.125rem] p-[2rem] bg-light-gray dark:bg-dark-background min-h-screen"
+          : "md:ml-[8.125rem] p-[2rem] bg-light-gray dark:bg-dark-background min-h-screen"
       }
     >
       <hgroup className="title-container flex items-center justify-between mb-[3rem] mr-[4rem]">

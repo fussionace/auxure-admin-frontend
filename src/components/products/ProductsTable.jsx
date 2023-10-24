@@ -8,6 +8,7 @@ import {
   FilterDark,
   PenDark,
   DeleteDark,
+  Toggle,
 } from "../../assets/svgs/svg-icons";
 import per from "../../assets/images/perf221.png";
 
@@ -109,23 +110,14 @@ const ProductsTable = ({ darkTheme }) => {
                     <CheckIcon className="hidden bg-coffee-brown rounded-[0.313rem] w-[1.5rem] h-[1.5rem] peer-checked:block absolute pointer-events-none left-0" />
                   </hgroup>
                   <div className="img-name flex items-center justify-center gap-[.5rem]">
-                    <div className="img-container w-[3rem] h-[3rem] rounded-[.5rem] bordr-solid border-[.5px] dark:border-accent-4 border-darker flex items-center justify-center">
+                    <div className="img-container w-[3rem] h-[3rem] rounded-[.5rem] bordr-solid border-[.5px] dark:border-accent-4  flex items-center justify-center">
                       <img src={order.pic} alt="profile image" />
                     </div>
                     <span className="block">{order.name}</span>
                   </div>
                 </td>
                 <td className="text-[.875rem] font-light">
-                  <svg
-                    width="48"
-                    height="28"
-                    viewBox="0 0 48 28"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="48" height="28" rx="14" fill="#D4B483" />
-                    <circle cx="34" cy="14" r="10" fill="white" />
-                  </svg>
+                  <Toggle />
                 </td>
 
                 <td className="text-[.875rem] font-light">{order.sku}</td>

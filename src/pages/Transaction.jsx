@@ -271,8 +271,8 @@ const Transaction = ({ toggleTheme, darkTheme, openSidebar }) => {
     <div
       className={
         openSidebar
-          ? "ml-[18.125rem] p-[2rem] bg-light-gray dark:bg-darkest min-h-screen"
-          : "ml-[8.125rem] p-[2rem] bg-light-gray dark:bg-darkest min-h-screen"
+          ? "md:ml-[18.125rem] p-[2rem] bg-light-gray dark:bg-darkest min-h-screen"
+          : "md:ml-[8.125rem] p-[2rem] bg-light-gray dark:bg-darkest min-h-screen"
       }
     >
       <hgroup className="title-container flex items-center justify-between mb-[3rem] mr-[4rem]">
@@ -344,7 +344,7 @@ const Transaction = ({ toggleTheme, darkTheme, openSidebar }) => {
               <th>CUSTOMER</th>
               <th>DATE</th>
               <th>TOTAL</th>
-              <th>PAYMENT METHOD</th>
+              <th>METHOD</th>
               <th>STATUS</th>
               <th>ACTION</th>
             </tr>

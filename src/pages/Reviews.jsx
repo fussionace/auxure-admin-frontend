@@ -40,7 +40,13 @@ const Reviews = ({ darkTheme, toggleTheme, openSidebar }) => {
   ];
 
   return (
-    <div className={openSidebar ? "ml-[18.125rem] p-[2rem] min-h-screen bg-accent dark:bg-dark-background" : "ml-[8.125rem] p-[2rem] min-h-screen bg-accent dark:bg-dark-background"}>
+    <div
+      className={
+        openSidebar
+          ? "md:ml-[18.125rem] p-[2rem] min-h-screen bg-accent dark:bg-dark-background"
+          : "md:ml-[8.125rem] p-[2rem] min-h-screen bg-accent dark:bg-dark-background"
+      }
+    >
       <hgroup className="title-container flex items-center justify-between mb-[3rem]">
         <div className="name-flex flex items-center justify-center gap-[2rem]">
           <h1 className="font-medium dark:text-white md:text-[2rem]">
@@ -87,9 +93,13 @@ const Reviews = ({ darkTheme, toggleTheme, openSidebar }) => {
         </div>
 
         <div className="avegrage_ratings w-full flex flex-col gap-[1.5rem] items-start border-r-[.0625rem] border-accent-5">
-          <h1 className="title text-[1rem] font-medium dark:text-accent-4">Average Ratings</h1>
+          <h1 className="title text-[1rem] font-medium dark:text-accent-4">
+            Average Ratings
+          </h1>
           <span className="flex items-center gap-[1rem]">
-            <div className="text-[2rem] font-medium dark:text-accent-4">4.0</div>
+            <div className="text-[2rem] font-medium dark:text-accent-4">
+              4.0
+            </div>
             <Stars />
           </span>
           <span className="block text-[1rem] font-medium text-accent-7 dark:text-gray">
@@ -121,7 +131,7 @@ const Reviews = ({ darkTheme, toggleTheme, openSidebar }) => {
         </div>
       </section>
       <section className="review_table">
-        <ReviewTable darkTheme={darkTheme}/>
+        <ReviewTable darkTheme={darkTheme} />
       </section>
     </div>
   );

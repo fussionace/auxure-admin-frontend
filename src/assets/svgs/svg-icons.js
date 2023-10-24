@@ -81,6 +81,7 @@ import { ReactComponent as lockDark } from "./lock-dark.svg";
 import { ReactComponent as recycleDark } from "./recycle-dark.svg";
 import { ReactComponent as arrowGrowthDark } from "./arrow-growth-dark.svg";
 import { ReactComponent as toolsDark } from "./tools-dark.svg";
+import { ReactComponent as toggle } from "./toggle.svg";
 
 export const Auxure = React.memo(auxure);
 export const Hamburger = React.memo(hamburger);
@@ -164,3 +165,4 @@ export const LockDark = React.memo(lockDark);
 export const RecycleDark = React.memo(recycleDark);
 export const ArrowGrowthDark = React.memo(arrowGrowthDark);
 export const ToolsDark = React.memo(toolsDark);
+export const Toggle = React.memo(toggle);
