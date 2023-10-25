@@ -154,7 +154,7 @@ const Orders = ({ toggleTheme, darkTheme, openSidebar }) => {
 
       <div className="tab_pages">
         <TabContent id="tab1" activeTab={activeTab}>
-          <OrderTable />
+          <OrderTable darkTheme={darkTheme} />
         </TabContent>
         <TabContent id="tab2" activeTab={activeTab}>
           {/* <OrderTable /> */}

@@ -1,6 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Back, Bag, BagDark, File } from "../../assets/svgs/svg-icons";
+import {
+  ArrowDown,
+  ArrowdownDark,
+  Back,
+  Bag,
+  BagDark,
+  File,
+} from "../../assets/svgs/svg-icons";
 
 const AddProducts = ({ setOpenPage, darkTheme }) => {
   return (
@@ -30,14 +37,14 @@ const AddProducts = ({ setOpenPage, darkTheme }) => {
         </button>
       </hgroup>
 
-      <div className="content-container mt-[4rem] gap-[2rem] flex items-start justify-between w-[90%]">
+      <div className="content-container mt-[4rem] gap-[2rem] flex items-start justify-between md:w-[90%]">
         <section className="left_container w-full">
           {/* description */}
           <div className="description-card">
             <h1 className="title md:text-[1.25rem] font-medium mb-[1rem] dark:text-accent-4">
               Description
             </h1>
-            <div className="desc_card w-[24.125rem] pt-[1.375rem] pr-[1.8125rem] pb-[1.25rem] pl-[1.75rem] rounded-[.375rem] border-solid border-gray border-[.5px]">
+            <div className="desc_card pt-[1.375rem] pr-[1.8125rem] pb-[1.25rem] pl-[1.75rem] rounded-[.375rem] border-solid border-gray border-[.5px]">
               <div className="product mb-[1rem]">
                 <label
                   htmlFor="product name"
@@ -73,21 +80,30 @@ const AddProducts = ({ setOpenPage, darkTheme }) => {
             <h1 className="title md:text-[1.25rem] dark:text-accent-4 font-medium mb-[1rem]">
               Category
             </h1>
-            <div className="desc_card w-[24.125rem] pt-[1.375rem] pr-[1.8125rem] pb-[1.25rem] pl-[1.75rem] rounded-[.375rem] border-solid border-gray border-[.5px]">
+            <div className="desc_card relative pt-[1.375rem] pr-[1.8125rem] pb-[1.25rem] pl-[1.75rem] rounded-[.375rem] border-solid border-gray border-[.5px]">
               <label
                 htmlFor="product name"
                 className="product_name dark:text-accent-4 text-[.85rem] font-light block mb-[.5rem]"
               >
                 Product Name
               </label>
+              {darkTheme ? (
+                <ArrowdownDark className="absolute right-[10%] top-[42%]" />
+              ) : (
+                <ArrowDown className="absolute right-[10%] top-[42%]" />
+              )}
               <select
                 name=""
                 id=""
-                className="w-full h-[2.375rem] dark:text-accent-5 bg-transparent rounded-[.5rem] py-[.5rem] px-[.5rem] border-solid border-lightbrown border-[1px] text-[16px] outline-none"
+                className="w-full appearance-none h-[2.375rem] dark:text-accent-5 bg-transparent rounded-[.5rem] py-[.5rem] px-[.5rem] border-solid border-lightbrown border-[1px] text-[16px] outline-none"
               >
                 <option value="" hidden selected></option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
+                <option value="male" className="dark:bg-dark-secondary">
+                  Male
+                </option>
+                <option value="female" className="dark:bg-dark-secondary">
+                  Female
+                </option>
               </select>
               <div className="block text-right text-[.75rem] font-light mt-[.5rem] text-gray">
                 Add Category
@@ -100,7 +116,7 @@ const AddProducts = ({ setOpenPage, darkTheme }) => {
             <h1 className="title dark:text-accent-4 md:text-[1.25rem] font-medium mb-[1rem]">
               Inventory
             </h1>
-            <div className="desc_card w-[24.125rem] flex items-center justify-between gap-[1rem] pt-[1.375rem] pr-[1.8125rem] pb-[1.25rem] pl-[1.75rem] rounded-[.375rem] border-solid border-gray border-[.5px]">
+            <div className="desc_card flex items-center justify-between gap-[1rem] pt-[1.375rem] pr-[1.8125rem] pb-[1.25rem] pl-[1.75rem] rounded-[.375rem] border-solid border-gray border-[.5px]">
               <div className="product w-[37%]">
                 <label
                   htmlFor="quantity"
@@ -136,10 +152,10 @@ const AddProducts = ({ setOpenPage, darkTheme }) => {
             <h1 className="title dark:text-accent-4 md:text-[1.25rem] font-medium mb-[1rem]">
               Product Images
             </h1>
-            <div className="w-[24.125rem] flex items-center justify-between gap-[1rem] pt-[1.375rem] pr-[1.8125rem] pb-[1.25rem] pl-[1.75rem] rounded-[.375rem] border-solid border-gray border-[.5px]">
+            <div className="flex items-center justify-between gap-[1rem] pt-[1.375rem] pr-[1.8125rem] pb-[1.25rem] pl-[1.75rem] rounded-[.375rem] border-solid border-gray border-[.5px]">
               <label
                 htmlFor="userImage"
-                className="text-[.75rem] w-[20.8125rem] h-[8.75rem] bg-blueish-gray dark:bg-gray border-dashed border-card-blue border-[1px] rounded-[.5rem] flex flex-col gap-[.3rem] items-center justify-center text-center"
+                className="text-[.75rem] w-full h-[8.75rem] bg-blueish-gray dark:bg-gray border-dashed border-card-blue border-[1px] rounded-[.5rem] flex flex-col gap-[.3rem] items-center justify-center text-center"
               >
                 <File />
                 <input type="file" id="userImage" className="hidden" />
@@ -156,17 +172,26 @@ const AddProducts = ({ setOpenPage, darkTheme }) => {
             <h1 className="title dark:text-accent-4 md:text-[1.25rem] font-medium mb-[1rem]">
               Shipping and Delivery
             </h1>
-            <div className="desc_card w-[24.125rem] pt-[1.375rem] pr-[1.8125rem] pb-[1.25rem] pl-[1.75rem] rounded-[.375rem] border-solid border-gray border-[.5px]">
+            <div className="desc_card relative pt-[1.375rem] pr-[1.8125rem] pb-[1.25rem] pl-[1.75rem] rounded-[.375rem] border-solid border-gray border-[.5px]">
               <label
                 htmlFor="product name"
                 className="product_name dark:text-accent-4 text-[.85rem] font-light block mb-[.5rem]"
               >
                 Weight
               </label>
-              <select className="w-full bg-transparent dark:text-white h-[2.375rem] rounded-[.5rem] py-[.5rem] px-[.5rem] border-solid border-lightbrown border-[1px] text-[16px] outline-none">
+              {darkTheme ? (
+                <ArrowdownDark className="absolute right-[10%] top-[26%]" />
+              ) : (
+                <ArrowDown className="absolute right-[10%] top-[26%]" />
+              )}
+              <select className="w-full appearance-none bg-transparent dark:text-white h-[2.375rem] rounded-[.5rem] py-[.5rem] px-[.5rem] border-solid border-lightbrown border-[1px] text-[16px] outline-none">
                 <option value="" hidden selected></option>
-                <option value="0.5">0.5</option>
-                <option value="1.0">1.0</option>
+                <option value="0.5" className="dark:bg-dark-secondary">
+                  0.5
+                </option>
+                <option value="1.0" className="dark:bg-dark-secondary">
+                  1.0
+                </option>
               </select>
               <div className="mt-[1.5rem]">
                 <span className="title block mb-[.5rem] dark:text-accent-4">
@@ -227,17 +252,26 @@ const AddProducts = ({ setOpenPage, darkTheme }) => {
             <h1 className="title md:text-[1.25rem] dark:text-accent-4 font-medium mb-[1rem]">
               Pricing
             </h1>
-            <div className="desc_card w-[24.125rem] pt-[1.375rem] pr-[1.8125rem] pb-[1.25rem] pl-[1.75rem] rounded-[.375rem] border-solid border-gray border-[.5px]">
+            <div className="desc_card relative pt-[1.375rem] pr-[1.8125rem] pb-[1.25rem] pl-[1.75rem] rounded-[.375rem] border-solid border-gray border-[.5px]">
               <label
                 htmlFor="product name"
                 className="product_name dark:text-accent-5 text-[.85rem] font-light block mb-[.5rem]"
               >
                 Price
               </label>
-              <select className="w-full bg-transparent dark:text-accent-5 h-[2.375rem] rounded-[.5rem] py-[.5rem] px-[.5rem] border-solid border-lightbrown border-[1px] text-[16px] outline-none">
+              {darkTheme ? (
+                <ArrowdownDark className="absolute right-[10%] top-[55%]" />
+              ) : (
+                <ArrowDown className="absolute right-[10%] top-[55%]" />
+              )}
+              <select className="w-full appearance-none bg-transparent dark:text-accent-5 h-[2.375rem] rounded-[.5rem] py-[.5rem] px-[.5rem] border-solid border-lightbrown border-[1px] text-[16px] outline-none">
                 <option value="" disabled selected hidden></option>
-                <option value="male">NGN20,000.00 - NGN40,000.00</option>
-                <option value="female">NGN40,000.00 - NGN80,000.00</option>
+                <option value="male" className="dark:bg-dark-secondary">
+                  NGN20,000.00 - NGN40,000.00
+                </option>
+                <option value="female" className="dark:bg-dark-secondary">
+                  NGN40,000.00 - NGN80,000.00
+                </option>
               </select>
             </div>
           </div>
